@@ -1,0 +1,12 @@
+{
+  "name": "alexa-voice",
+  "description": "",
+  "version": "0.1.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "lodash": "^4.17.15",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {}
+}

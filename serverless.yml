@@ -1,0 +1,32 @@
+service: alexa-voice
+app: alexa-voice-app
+org: hemanthk313
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+# you can overwrite defaults here
+stage: dev
+region: us-east-1
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+      - http:
+          path: /
+          method: post
+  handler:
+    handler: handler.main
+    events:
+      - alexaSkill: amzn1.ask.skill.727ce428-ce67-413b-b9c6-875eef3cd599            
+#    Define function environment variables here
+#    environment:
+#      variable2: value2
